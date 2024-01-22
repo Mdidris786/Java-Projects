@@ -1,0 +1,68 @@
+Data bases
+
+
+
+--To store the collection of informations.
+
+Types DB:
+
+1. Hierarchical Database--Tree like structure--h2
+2. Relational Database---its depends--Employee working on which department---Mysql,Oracle, Sql Server, PostGreSQL, SQLite
+3. Object Relational Database:collection of objects to store a single objects -Object Relation Mapping
+4. Network Database:--Cassandra
+5. Document Database: MongoDB
+
+Database Management System:
+
+is a software that manipulate the store the data and retrieval the data.
+
+
+Types:
+
+1. Hierarchical Database Management System--Tree like structure--h2
+2. Relational Database---its depends--Employee working on which department---Mysql,Oracle, Sql Server, PostGreSQL, SQLite
+3. Object Relational Database:collection of objects to store a single objects -Object Relation Mapping
+4. Network Database:--Cassandra
+5. Document Database: MongoDB
+
+
+Language: SQL--Structured Query Language.
+
+
+Commands:  DDL,DML,DCL,TCL,DQL
+
+DDL: Data Definition Language
+
+     create,alter,truncate,drop
+
+DML:Data Manipulation Language
+     
+     Insert,Update,Delete
+
+DCL: Data Controlling Language
+
+     Grant, Revoke
+
+TCL: Transaction Control Language:
+
+     Commit, Rollback
+
+DQL:Data Query Lanague:
+
+     Select
+  
+Driver:
+
+----core, thin, native, network   
+
+
+MYSQL,ORACLE,H2,IBM DB2==thin layer
+     
+DBMS: MYSQL:
+
+XAMPP--x-xos,Apache,Mysql,Php, Perl or Python
+
+MAMP--
+LAMP--
+WAMP
+

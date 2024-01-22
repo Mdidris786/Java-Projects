@@ -1,0 +1,18 @@
+package Dec22;
+
+import java.util.Scanner;
+
+public class Distance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int u,a,t, distance;
+		u = 2;
+		a = 4;
+		t = 6;
+		distance = u*t+(a*t*t)/2;
+		System.out.println("Distance Travelled ="+distance+"meter");
+		System.println();
+	}
+
+}

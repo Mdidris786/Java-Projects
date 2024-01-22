@@ -1,0 +1,10 @@
+package Jan03;
+
+public class MethodOverriden {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

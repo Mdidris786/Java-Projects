@@ -1,0 +1,17 @@
+package Dec22;
+
+import java.util.Scanner;
+
+public class Distance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int ut,at,distance;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the Velocity value ");
+		vel=sc.nextInt();
+		System.out.println("Enter the accleration value");
+		acc=sc.nextInt();
+	}
+
+}

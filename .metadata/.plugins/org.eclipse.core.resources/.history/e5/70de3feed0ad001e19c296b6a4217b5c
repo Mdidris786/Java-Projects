@@ -1,0 +1,23 @@
+package Jan08;
+
+class Student1 implements Comparable<Student1>
+{
+	int id;
+	String name;
+	public Student1(int id, String name, int age) {
+		this.id = id;
+		this.name = name;
+		this.age = age;
+	}
+
+
+	int age;
+
+public class ComparatorTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

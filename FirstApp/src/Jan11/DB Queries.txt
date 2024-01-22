@@ -1,0 +1,203 @@
+
+Setting environment for using XAMPP for Windows.
+moham@DESKTOP-KTHOJKJ c:\xampp
+# mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+5 rows in set (0.026 sec)
+
+MariaDB [(none)]> create database shyam;
+Query OK, 1 row affected (0.003 sec)
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| shyam              |
+| test               |
++--------------------+
+6 rows in set (0.001 sec)
+
+MariaDB [(none)]> use shyam;
+Database changed
+MariaDB [shyam]> create table Employee(id int, name varchar(20), age int, salary int);
+Query OK, 0 rows affected (0.015 sec)
+
+MariaDB [shyam]> desc Employee;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| id     | int(11)     | YES  |     | NULL    |       |
+| name   | varchar(20) | YES  |     | NULL    |       |
+| age    | int(11)     | YES  |     | NULL    |       |
+| salary | int(11)     | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+4 rows in set (0.021 sec)
+
+MariaDB [shyam]> insert into Employee values(101,"Jeeva",30,30000);
+Query OK, 1 row affected (0.078 sec)
+
+MariaDB [shyam]> insert into Employee values(102,"Priya",28,28000);
+Query OK, 1 row affected (0.004 sec)
+
+MariaDB [shyam]> insert into Employee values(103,"Lakshmi",28,28000),(103,"Sindhu",28,40000);
+Query OK, 2 rows affected (0.004 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+MariaDB [shyam]> select * from Employee;
++------+---------+------+--------+
+| id   | name    | age  | salary |
++------+---------+------+--------+
+|  101 | Jeeva   |   30 |  30000 |
+|  102 | Priya   |   28 |  28000 |
+|  103 | Lakshmi |   28 |  28000 |
+|  103 | Sindhu  |   28 |  40000 |
++------+---------+------+--------+
+4 rows in set (0.001 sec)
+
+MariaDB [shyam]> select id,name from Employee;
++------+---------+
+| id   | name    |
++------+---------+
+|  101 | Jeeva   |
+|  102 | Priya   |
+|  103 | Lakshmi |
+|  103 | Sindhu  |
++------+---------+
+4 rows in set (0.000 sec)
+
+MariaDB [shyam]> select * from Employee where name="Jeeva";
++------+-------+------+--------+
+| id   | name  | age  | salary |
++------+-------+------+--------+
+|  101 | Jeeva |   30 |  30000 |
++------+-------+------+--------+
+1 row in set (0.001 sec)
+
+MariaDB [shyam]> select * from Employee where salary>=28000;
++------+---------+------+--------+
+| id   | name    | age  | salary |
++------+---------+------+--------+
+|  101 | Jeeva   |   30 |  30000 |
+|  102 | Priya   |   28 |  28000 |
+|  103 | Lakshmi |   28 |  28000 |
+|  103 | Sindhu  |   28 |  40000 |
++------+---------+------+--------+
+4 rows in set (0.001 sec)
+
+MariaDB [shyam]> select * from Employee where salary>28000;
++------+--------+------+--------+
+| id   | name   | age  | salary |
++------+--------+------+--------+
+|  101 | Jeeva  |   30 |  30000 |
+|  103 | Sindhu |   28 |  40000 |
++------+--------+------+--------+
+2 rows in set (0.000 sec)
+
+MariaDB [shyam]> alter table Employee add column emailid varchar(20);
+Query OK, 0 rows affected (0.026 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [shyam]> desc Employee;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| id      | int(11)     | YES  |     | NULL    |       |
+| name    | varchar(20) | YES  |     | NULL    |       |
+| age     | int(11)     | YES  |     | NULL    |       |
+| salary  | int(11)     | YES  |     | NULL    |       |
+| emailid | varchar(20) | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+5 rows in set (0.027 sec)
+
+MariaDB [shyam]> select * from Employee;
++------+---------+------+--------+---------+
+| id   | name    | age  | salary | emailid |
++------+---------+------+--------+---------+
+|  101 | Jeeva   |   30 |  30000 | NULL    |
+|  102 | Priya   |   28 |  28000 | NULL    |
+|  103 | Lakshmi |   28 |  28000 | NULL    |
+|  103 | Sindhu  |   28 |  40000 | NULL    |
++------+---------+------+--------+---------+
+4 rows in set (0.001 sec)
+
+MariaDB [shyam]> update Employee set emailid="jeeva@gmail.com";
+Query OK, 4 rows affected (0.005 sec)
+Rows matched: 4  Changed: 4  Warnings: 0
+
+MariaDB [shyam]> select * from Employee;
++------+---------+------+--------+-----------------+
+| id   | name    | age  | salary | emailid         |
++------+---------+------+--------+-----------------+
+|  101 | Jeeva   |   30 |  30000 | jeeva@gmail.com |
+|  102 | Priya   |   28 |  28000 | jeeva@gmail.com |
+|  103 | Lakshmi |   28 |  28000 | jeeva@gmail.com |
+|  103 | Sindhu  |   28 |  40000 | jeeva@gmail.com |
++------+---------+------+--------+-----------------+
+4 rows in set (0.000 sec)
+
+MariaDB [shyam]> update Employee set emailid="jeeva@gmail.com" where id=101;
+Query OK, 0 rows affected (0.001 sec)
+Rows matched: 1  Changed: 0  Warnings: 0
+
+MariaDB [shyam]> update Employee set emailid="priya@gmail.com" where id=102;
+Query OK, 1 row affected (0.005 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [shyam]> select * from Employee;
++------+---------+------+--------+-----------------+
+| id   | name    | age  | salary | emailid         |
++------+---------+------+--------+-----------------+
+|  101 | Jeeva   |   30 |  30000 | jeeva@gmail.com |
+|  102 | Priya   |   28 |  28000 | priya@gmail.com |
+|  103 | Lakshmi |   28 |  28000 | jeeva@gmail.com |
+|  103 | Sindhu  |   28 |  40000 | jeeva@gmail.com |
++------+---------+------+--------+-----------------+
+4 rows in set (0.001 sec)
+
+MariaDB [shyam]> delete from Employee where name="Priya";
+Query OK, 1 row affected (0.005 sec)
+
+MariaDB [shyam]> select * from Employee;
++------+---------+------+--------+-----------------+
+| id   | name    | age  | salary | emailid         |
++------+---------+------+--------+-----------------+
+|  101 | Jeeva   |   30 |  30000 | jeeva@gmail.com |
+|  103 | Lakshmi |   28 |  28000 | jeeva@gmail.com |
+|  103 | Sindhu  |   28 |  40000 | jeeva@gmail.com |
++------+---------+------+--------+-----------------+
+3 rows in set (0.000 sec)
+
+MariaDB [shyam]> truncate table Employee;
+Query OK, 0 rows affected (0.019 sec)
+
+MariaDB [shyam]> select * from Employee;
+Empty set (0.001 sec)
+
+MariaDB [shyam]> drop table Employee;
+Query OK, 0 rows affected (0.011 sec)
+
+MariaDB [shyam]> select * from Employee;
+ERROR 1146 (42S02): Table 'shyam.employee' doesn't exist
+MariaDB [shyam]>

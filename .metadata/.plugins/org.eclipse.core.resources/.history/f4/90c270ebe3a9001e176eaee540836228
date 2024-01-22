@@ -1,0 +1,41 @@
+package Jan03;
+
+interface A
+{
+	public void display();
+	int a=10;
+}
+interface B
+{
+	public void show();
+	int b=20;
+}
+
+class D implements A,B
+{
+	public void display()
+	{
+		System.out.println("Hello word");
+	}
+	
+	public void show()
+	{
+		
+		System.out.println(a+b);
+	}
+}
+
+public class InterfaceExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//A a=new A();
+		
+		D d=new D();
+		d.display();
+		d.show();
+
+	}
+
+}

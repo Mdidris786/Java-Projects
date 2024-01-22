@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modules>
+  <module moduleId="org.eclipse.jst.jee.server:Signuppage" serverId="Tomcat v9.0 Server at localhost (3)"/>
+  <module moduleId="org.eclipse.jst.jee.server:Signupwebproject" serverId="Tomcat v9.0 Server at localhost (8)"/>
+  <module moduleId="org.eclipse.jst.jee.server:FirstWebProject" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:signupwebproject" serverId="Tomcat v9.0 Server at localhost (10)"/>
+  <module moduleId="org.eclipse.jst.jee.server:Loginpage" serverId="Tomcat v9.0 Server at localhost"/>
+</modules>

@@ -1,0 +1,13 @@
+Contraints: Restrictions
+
+Primary Key--Unique 
+
+Not Null---Null is allowed
+
+Default---default value is mentioned
+
+Unique Key ---Unique is allowed null values also
+
+Foreign Key--reference by the another table 
+
+Check ---evaluate the conditions
